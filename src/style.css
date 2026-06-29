@@ -132,6 +132,136 @@ button {
   margin: 0;
 }
 
+.weather-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.weather-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.weather-temperature {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.temperature-value {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.temperature-unit {
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+.weather-location strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.weather-location span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.weather-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.day-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: var(--card-text);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.day-period img {
+  width: 28px;
+  height: 28px;
+}
+
+.weather-description {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.weather-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-item {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.metric-value {
+  color: var(--card-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.empty-state,
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 240px;
+  text-align: center;
+}
+
+.empty-state p,
+.loading-state p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(75, 85, 99, 0.2);
+  border-top-color: var(--button-bg);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+button.disabled,
+input.disabled {
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 768px) {
   #app {
     padding: 24px 12px;
